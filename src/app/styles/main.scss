@@ -1,0 +1,33 @@
+body {
+  background: #F7F7F7;
+
+  .navbar-fixed {
+    margin-bottom: 65px;
+
+    nav {
+      background-color: #fff;
+      color: #3C3C3C;
+
+      .img-nav-logo {
+        height: 100%;
+
+        img {
+          vertical-align: middle;
+        }
+
+      }
+      ul {
+        li {
+          a {
+            color: #3C3C3C;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.bg-red {
+  background-color: #DE4B4B;
+}

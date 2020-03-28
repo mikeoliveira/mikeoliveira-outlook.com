@@ -1,0 +1,25 @@
+body {
+  background: #F7F7F7;
+}
+body .navbar-fixed {
+  margin-bottom: 65px;
+}
+body .navbar-fixed nav {
+  background-color: #fff;
+  color: #3C3C3C;
+}
+body .navbar-fixed nav .img-nav-logo {
+  height: 100%;
+}
+body .navbar-fixed nav .img-nav-logo img {
+  vertical-align: middle;
+}
+body .navbar-fixed nav ul li a {
+  color: #3C3C3C;
+}
+
+.bg-red {
+  background-color: #DE4B4B;
+}
+
+/*# sourceMappingURL=main.css.map */
