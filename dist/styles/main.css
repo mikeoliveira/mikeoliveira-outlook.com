@@ -1,8 +1,9 @@
 body {
   background: #F7F7F7;
+  font-family: Verdana, sans-serif;
 }
-body .navbar-fixed {
-  margin-bottom: 65px;
+body a {
+  text-decoration: none;
 }
 body .navbar-fixed nav {
   background-color: #fff;
@@ -18,8 +19,169 @@ body .navbar-fixed nav ul li a {
   color: #3C3C3C;
 }
 
-.bg-red {
+.container .custom-mg-mobile {
+  height: 600px;
+}
+
+.bg-red-box {
   background-color: #DE4B4B;
+  color: #FFFFFF;
+}
+.bg-red-box a {
+  color: #FFFFFF;
+}
+.bg-red-box h5 {
+  font-weight: bold;
+  font-size: 24px;
+}
+.bg-red-box h5.icon-credit-card:before {
+  content: "";
+  background-image: url("/src/assets/images/icon-credit-card.svg");
+  background-size: 50px 50px;
+  height: 50px;
+  width: 50px;
+  float: left;
+  margin-right: 10px;
+}
+
+.bg-credit-card {
+  background-image: url("/src/assets/images/credit-card-inactive.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  padding: 15px;
+  text-shadow: 0px 1px 2px #000000;
+}
+.bg-credit-card .number-credit-card {
+  margin-top: 85px;
+  margin-bottom: 40px;
+  letter-spacing: 7px;
+  font-size: 24px;
+}
+
+.mg-bottom-25 {
+  margin-bottom: 25px !important;
+}
+
+.mg-bottom-0 {
+  margin-bottom: 0px !important;
+}
+
+.step-payment {
+  display: block;
+  line-height: 64px;
+  text-align: center;
+  margin-top: 40px;
+}
+.step-payment .breadcrumb {
+  color: #DE4B4B !important;
+  font-size: 13px !important;
+}
+.step-payment .breadcrumb:before {
+  color: #DE4B4B !important;
+}
+.step-payment .breadcrumb i {
+  vertical-align: middle;
+  float: none;
+}
+.step-payment .breadcrumb span {
+  border-radius: 50px;
+  border: 1px solid #DE4B4B;
+  padding: 1px 5px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+  .navbar-fixed {
+    margin-bottom: 65px;
+  }
+
+  .bg-red-box {
+    padding-left: 45px !important;
+    height: 100%;
+  }
+
+  .text-align-middle {
+    vertical-align: middle;
+    display: inline-flex;
+  }
+
+  .bg-credit-card {
+    width: 369px;
+    height: 240px;
+  }
+  .bg-credit-card .number-credit-card {
+    margin-top: 85px;
+    margin-bottom: 40px;
+    letter-spacing: 7px;
+    font-size: 24px;
+  }
+
+  .height-box {
+    min-height: 600px !important;
+  }
+
+  .pd-top {
+    padding-top: 50px !important;
+  }
+
+  .mg-top {
+    margin-top: 40px !important;
+  }
+
+  .form-custom {
+    padding-left: 50px !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+  .container .custom-mg-mobile {
+    padding: 0px;
+    height: 240px;
+  }
+
+  .bg-red-box.height-box {
+    max-height: 275px;
+    min-width: 275px;
+  }
+  .bg-red-box h5 {
+    font-size: 20px;
+  }
+
+  .text-align-middle {
+    text-align: center;
+    display: block;
+  }
+  .text-align-middle i {
+    float: left;
+  }
+
+  .bg-credit-card {
+    background-size: 285px;
+    width: 285px;
+    height: 200px;
+    background-position: center;
+    position: relative;
+    margin: 0 auto;
+  }
+  .bg-credit-card .number-credit-card {
+    margin-top: 60px;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+  }
+
+  .pd-top {
+    padding-top: 30px !important;
+  }
+
+  .mg-top {
+    margin-top: 20px !important;
+  }
+
+  .form-custom {
+    margin-top: 120px !important;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
