@@ -179,3 +179,17 @@ input_exp_date_credit_card.addEventListener('blur', function(event) {
 });
 // ------- END EXPIRED DATE ------- //
 
+function selectDividePricePayment(data){
+  var select_divide_payment_credit_card = document.getElementById('select_divide_payment_credit_card');
+  
+  data.divide.forEach(element => {
+    let option = document.createElement("option");
+    option.value = element.parcela;
+    option.text = element.description;
+    console.log(element);
+    select_divide_payment_credit_card.appendChild(option);
+  });
+
+  var instances = M.FormSelect.init(select_divide_payment_credit_card);
+  
+}
