@@ -45,17 +45,44 @@ body .navbar-fixed nav ul li a {
 }
 
 .bg-credit-card {
-  background-image: url("/src/assets/images/credit-card-inactive.svg");
   background-repeat: no-repeat;
   position: absolute;
   padding: 15px;
   text-shadow: 0px 1px 2px #000000;
+  transition: ease-in-out 0.5s;
 }
 .bg-credit-card .number-credit-card {
   margin-top: 85px;
   margin-bottom: 40px;
   letter-spacing: 7px;
   font-size: 24px;
+}
+.bg-credit-card .cvv-credit-card {
+  margin-top: 90px;
+  margin-left: 150px !important;
+  letter-spacing: 7px;
+  font-size: 20px;
+  color: #000 !important;
+}
+.bg-credit-card.front-credit-card {
+  background-image: url("/src/assets/images/credit-card-inactive.svg");
+}
+.bg-credit-card.front-credit-card-active {
+  background-image: url("/src/assets/images/credit-card-active.svg");
+}
+.bg-credit-card.front-credit-card-active .brand-credit-card {
+  background-image: url("/src/assets/images/visa-brand.png");
+  position: absolute;
+  width: 70px;
+  height: 23px;
+  margin-top: 25px;
+  margin-left: 0px;
+}
+.bg-credit-card.back-credit-card {
+  background-image: url("/src/assets/images/credit-card-back-inactive.svg");
+}
+.bg-credit-card.back-credit-card-active {
+  background-image: url("/src/assets/images/credit-card-back-active.svg");
 }
 
 .mg-bottom-25 {
@@ -115,9 +142,13 @@ body .navbar-fixed nav ul li a {
     letter-spacing: 7px;
     font-size: 24px;
   }
+  .bg-credit-card .cvv-credit-card {
+    margin-top: 90px;
+    margin-left: 150px !important;
+  }
 
   .height-box {
-    min-height: 600px !important;
+    min-height: 650px !important;
   }
 
   .pd-top {
@@ -168,6 +199,12 @@ body .navbar-fixed nav ul li a {
   .bg-credit-card .number-credit-card {
     margin-top: 60px;
     margin-bottom: 25px;
+    letter-spacing: 3px;
+    font-size: 21px;
+  }
+  .bg-credit-card .cvv-credit-card {
+    margin-top: 75px;
+    margin-left: 110px !important;
     letter-spacing: 3px;
   }
 

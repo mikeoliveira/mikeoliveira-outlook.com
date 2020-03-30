@@ -44,12 +44,19 @@
                 <h5 class="icon-credit-card">Adicionar um novo cartão de crédito</h5>
               </div>
               <div class="col s12">
-                <div class="bg-credit-card">
-                  <div class="number-credit-card col s12">
+                <div id="front_credit_card" class="bg-credit-card front-credit-card">
+                  <div class="brand-credit-card"></div>
+                  <div id="show_number_credit_card" class="number-credit-card col s12">
                     **** **** **** ****
                   </div>
-                  <div class="name-credit-card col s8">NOME DO TITULAR</div>
-                  <div class="date-exp-credit-card col s3 push-s1">00/00</div>
+                  <div id="show_name_credit_card" class="name-credit-card col s8" >NOME DO TITULAR</div>
+                  <div id="show_exp_date_credit_card" class="date-exp-credit-card col s3 push-s1">00/00</div>
+                </div>
+
+                <div id="back_credit_card"  class="bg-credit-card back-credit-card hide">
+                  <div id="show_cvv_credit_card" class="cvv-credit-card col s12">
+                    ***
+                  </div>
                 </div>
               </div>
             </div>
@@ -81,30 +88,34 @@
           <form class="col s12 form-custom">
             <div class="row">
               <div class="input-field col s12">
-                <input id="number_credit_card" type="text" class="validate">
+                <input id="number_credit_card" type="text" class="validate" onkeypress="return isNumberKey(event)" minlength="16" maxlength="16" onkeyup="actionNumberCreditCard(event)">
                 <label for="number_credit_card">Número do cartão</label>
+                <span id="msg_number_credit_card" class="helper-text" data-error="" data-success=""></span>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="name" type="text" class="validate">
-                <label for="name">Nome (igual ao cartão)</label>
+                <input id="name_credit_card" type="text" class="validate" onkeyup="actionNameCreditCard(event)">
+                <label for="name_credit_card">Nome (igual ao cartão)</label>
+                <span id="msg_number_credit_card" class="helper-text" data-error="Insira seu nome completo" data-success=""></span>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s6">
-                <input id="exp_date" type="text" class="validate">
-                <label for="exp_date">Validade</label>
+                <input id="input_exp_date_credit_card" type="text" class="validate" placeholder="mm/aa" onkeypress="validateExpiredDate(this)" maxlength="5" >
+                <label for="input_exp_date_credit_card">Validade</label>
+                <span id="msg_exp_date_credit_card" class="helper-text" data-error="Data inválida" data-success=""></span>
               </div>
               <div class="input-field col s6">
-                <input id="cvv" type="text" class="validate">
-                <label for="cvv">CVV</label>
+                <input id="input_cvv_credit_card" type="text" class="validate" onkeypress="return isNumberKey(event)" minlength="3" maxlength="3" onkeyup="actionCVV(event)">
+                <label for="input_cvv_credit_card">CVV</label>
+                <span id="msg_cvv_credit_card" class="helper-text" data-error="Código inválido" data-success=""></span>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
                 <select>
-                  <option value="" selected>Número de parcelas</option>
+                  <option value="" disabled selected>Número de parcelas</option>
                   <option value="1">Option 1</option>
                   <option value="2">Option 2</option>
                   <option value="3">Option 3</option>

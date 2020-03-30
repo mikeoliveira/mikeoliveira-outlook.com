@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     watch: {
       scripts: {
-        files: 'src/app/*.js',
+        files: ['src/app/*.js', 'src/app/services/*.js'],
         tasks: ['uglify:build'],
       },
       css: {
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       build: {
-        src: 'src/app/*.js',
+        src: ['src/app/*.js', 'src/app/services/*.js'],
         dest: 'dist/js/<%= pkg.name %>.min.js'
       }
     },
