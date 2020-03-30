@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: ['src/app/*.js', 'src/app/services/*.js'],
-        tasks: ['uglify:build'],
+        tasks: ['terser:main'],
       },
       css: {
         files: 'src/app/styles/*.scss',
@@ -15,17 +15,18 @@ module.exports = function(grunt) {
       livereload: {
         options: { livereload: true },
         files: ['dist/**/*']
-    },
-    },    
-    uglify: {
-      options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
-      build: {
-        src: ['src/app/*.js', 'src/app/services/*.js'],
-        dest: 'dist/js/<%= pkg.name %>.min.js'
-      }
-    },
+    },    
+    terser: {
+      options: {
+        ecma: 2015
+      },
+      main: {
+        files: {
+          'dist/js/<%= pkg.name %>.min.js': ['src/app/*.js', 'src/app/services/*.js'],
+        },
+      },
+    },    
     jshint: {
       all: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js']
     },
@@ -58,7 +59,9 @@ module.exports = function(grunt) {
   });
 
   // Load the plugin that provides the "uglify" task.
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  //grunt.loadNpmTasks('grunt-contrib-uglify');
+  //same function uglify but run with JS ES6+
+  grunt.loadNpmTasks('grunt-terser');
 
   // Load the plugin that provides the "jshint" task.
   grunt.loadNpmTasks('grunt-contrib-jshint');
