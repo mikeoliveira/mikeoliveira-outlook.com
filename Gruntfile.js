@@ -87,7 +87,7 @@ module.exports = function(grunt) {
     grunt.log.writeln(target + ': ' + filepath + ' has ' + action);
   });
 
-  grunt.registerTask('serve', 'Compile then start connect web server' , function(){
+  grunt.registerTask('server', 'Compile then start connect web server' , function(){
     grunt.task.run([
       'connect',
       'watch'

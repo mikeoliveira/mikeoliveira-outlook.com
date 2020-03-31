@@ -117,6 +117,16 @@ body .navbar-fixed nav ul li a {
   font-weight: bold;
 }
 
+@media only screen and (min-width: 1400px) {
+  .container {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 100%;
+  }
+}
 @media screen and (min-width: 600px) {
   .navbar-fixed {
     margin-bottom: 65px;

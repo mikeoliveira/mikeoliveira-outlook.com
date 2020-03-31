@@ -115,6 +115,7 @@ input_cvv_credit_card.addEventListener('blur', function(event) {
     back_credit_card.classList.remove('back-credit-card');
     back_credit_card.classList.add('back-credit-card-active');
   }else {
+    input_cvv_credit_card.classList.add('invalid');
     back_credit_card.classList.add('back-credit-card');
     back_credit_card.classList.remove('back-credit-card-active');
   }
